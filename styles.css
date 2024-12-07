@@ -1,0 +1,480 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Banner */
+.top-banner {
+    background-color: black; /* Dark red */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    /* font-weight: bold; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 30px 20px;
+    position:relative;
+    top: 40px; /* To avoid overlapping the banner */
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+/* logo updated end*/
+.centered-logo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.centered-logo img {
+    max-width: 130px;
+    height: 130px;
+}
+/* logo updated end  */
+/* updated nav - links */
+
+/* Nav container */
+.nav-links {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;     /* Center items vertically */
+    width: 100%;             /* Ensure it takes full width of the container */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+}
+
+/* Remove default list styling and make nav items horizontal */
+.nav-links ul {
+    list-style: none;        /* Remove bullets from list */
+    margin: 0;               /* Remove margin */
+    padding: 0;              /* Remove padding */
+    display: flex;           /* Display items horizontally */
+    gap: 20px;               /* Space between links */
+    justify-content: center; /* Center the links horizontally inside the ul */
+}
+
+/* Style for each navigation link */
+.nav-links ul li a {
+    text-decoration: none;     /* Remove underline */
+    color: black;              /* Set text color */
+    font-size: 14px;           /* Set font size */
+    /* padding: 8px 16px;          */
+    transition: color 0.3s, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.nav-links ul li a:hover {
+    color: lightgray;            /* Change text color on hover */
+    transform: scale(1.1);     /* Slightly scale the link when hovered */
+}
+
+/* Optional: Add a responsive design for smaller screens */
+@media (max-width: 768px) {
+    .nav-links ul {
+        flex-direction: column;  /* Stack links vertically on small screens */
+        gap: 10px;               /* Smaller gap between links */
+    }
+
+    .nav-links ul li a {
+        font-size: 16px;         /* Reduce font size on smaller screens */
+        padding: 10px 20px;      /* Increase padding for better click area */
+    }
+}
+/* end updated nav-links */
+
+/* Icons */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-icons .icon {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    transition: color 0.3s;
+}
+
+.nav-icons .icon:hover {
+    color: lightgray;
+}
+
+/* Hamburger Menu (for small screens) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin-top: 50px; /* Adjust based on navbar height */
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Below the navbar */
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+/* collage banner */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+.banner-left {
+    width: 60%; /* 60% of the total width */
+}
+
+.collage-image {
+    width: 100%;
+    height: auto;
+}
+
+.banner-right {
+    width: 40%; /* 40% of the total width */
+    padding-left: 20px;
+}
+
+.banner-right h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.banner-right h3 {
+    font-size: 1.5em;
+    color: #D32F2F;
+    margin-top: 10px;
+}
+
+.banner-right p {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: white;
+}
+
+.banner-right button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #D32F2F;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.banner-right button:hover {
+    background-color: #c62828;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+    }
+
+    .banner-left, .banner-right {
+        width: 100%;
+    }
+
+    .banner-right {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .collage-image {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+/* cards section */
+
+/* Section Styling */
+.product-cards {
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.product-cards h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Cards */
+.card {
+    position: relative;
+    background-color: #fff;
+    padding: 15px;
+    /* border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    /* border-radius: 4px; */
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.card .stars {
+    color: #ffcc00;
+    margin-bottom: 8px;
+}
+
+.card .price {
+    font-size: 16px;
+    color: #333;
+}
+
+.card .price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 5px;
+}
+
+/* Sale Tag */
+.sale-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e63946;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 10px;
+    }
+
+    .sale-tag {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+}
+/* footer */
+
+/* Footer Styling */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Column Styling */
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ccc;
+}
+
+.footer-column p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-column form {
+    margin-top: 10px;
+}
+
+.footer-column form input {
+    padding: 8px;
+    width: 70%;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.footer-column form button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-column form button:hover {
+    background-color: #ccc;
+}
+
+/* Logo Section */
+/* Logo Section */
+.footer-logo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.footer-icons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 25px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #ccc;
+}
+
+/* Powered By Section */
+.powered-by {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.powered-by strong {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+        max-width: 120px;
+    }
+    .footer-logo {
+        /* Optional: Adjust margins or padding if needed */
+        margin-bottom: 20px;
+    }
+    
+    .footer-icons {
+        text-align: center;
+    }
+}
+
